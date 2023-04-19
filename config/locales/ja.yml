@@ -1,4 +1,4 @@
- ja:
+ja:
     enums:
       order:
         payment_method:
@@ -7,14 +7,14 @@
 
       order:
         status:
-           waiting_for_production: "入金待ち"
-           payment_confirmation: "入金確認"
-           in_production: "制作中"
-           shipping_preparation: "発送準備中"
-           sent: "発送済み"
+          waiting_for_production: "入金待ち"
+          payment_confirmation: "入金確認"
+          in_production: "制作中"
+          shipping_preparation: "発送準備中"
+          sent: "発送済み"
 
       order_detail:
-         making_status:
+        making_status:
             cannot_start: "着手不可"
             waiting_for_production: "製作待ち"
             in_production: "制作中"
