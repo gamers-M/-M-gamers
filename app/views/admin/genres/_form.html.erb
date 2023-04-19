@@ -1,0 +1,9 @@
+<%= form_with model: genre, url: admin_genre_path do |f| %>
+  <%= f.label :ジャンル名 %>
+  <%= f.text_field :name %>
+  <% if f.object.new_record? %>
+    <%= f.submit "Create Book" %>
+  <% else %>
+    <%= f.submit "Update Book" %>
+  <% end %>
+<% end %>
