@@ -19,7 +19,7 @@
            <% end %>
            </td>
          <td><%= customer.email %></td>
-         <td><%= customer.is_deleted %></td>
+         <td><%= customer.is_deleted ? '退会' : '有効'%></td>
        </tr>
     <% end %>
     <%= paginate @customers %>
