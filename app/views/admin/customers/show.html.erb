@@ -1,15 +1,20 @@
-<h2><%= @customer.last_name %><%= @customer.first_name %>さんの会員詳細</h2>
+<div class='container'>
+<div class='row'>
+<div class='col-md-8 offset-md-1'>
+<div><%= @customer.last_name %><%= @customer.first_name %>さんの会員詳細</div>
 
-<h6>　　　　　会員ID　　　　<%= @customer.id %></h6>
-<h6>　　　　　氏名　　　　<%= @customer.last_name %><%= @customer.first_name %></h6>
-<h6>　　　　　フリガナ　　　　<%= @customer.last_name_kana %><%= @customer.first_name_kana %></h6>
-<h6>　　　　　郵便番号　　　　<%= @customer.postcode %></h6>
-<h6>　　　　　住所　　　　<%= @customer.address %></h6>
-<h6>　　　　　電話番号　　　　<%= @customer.phone_number %></h6>
-<h6>　　　　　メールアドレス　　　　<%= @customer.email %></h6>
-<h6>　　　　　会員ステータス　　　　<%= @customer.is_deleted %></h6>
+<div>会員ID<%= @customer.id %></div>
+<div>氏名<%= @customer.last_name %><%= @customer.first_name %></div>
+<div>フリガナ<%= @customer.last_name_kana %><%= @customer.first_name_kana %></div>
+<div>郵便番号<%= @customer.postcode %></div>
+<div>住所<%= @customer.address %></div>
+<div>電話番号<%= @customer.phone_number %></div>
+<div>メールアドレス<%= @customer.email %></div>
+<div >会員ステータス<%= @customer.is_deleted ? '退会' : '有効'%></div>
 
 <%= link_to "編集する",edit_admin_customer_path(@customer.id)%>
 <%= link_to "注文履歴一覧をみる",admin_path %>
-
+</div>
+</div>
+</div>
 
