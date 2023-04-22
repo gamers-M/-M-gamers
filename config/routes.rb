@@ -37,7 +37,7 @@ Rails.application.routes.draw do
     #会員
     get '/customers', to: 'customers#show'
     get '/customers/informetion/edit', to: 'customers#edit'
-    post '/customers', to: 'customers#update'
+    patch '/customers/informetion', to: 'customers#update', as: 'update_informetion'
     get 'customers/quit'
     patch 'customers/out'
     #ホーム画面
