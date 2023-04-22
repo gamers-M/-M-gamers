@@ -1,2 +1,27 @@
-<h1>Public::Homes#top</h1>
-<p>Find me in app/views/public/homes/top.html.erb</p>
+<!--　▼ ジャンボトロン　 -->
+    <div class="jumbotron">
+      <div class="container">
+        ようこそ、ながのCAKEへ！<br>
+        このサイトは、ケーキ販売のECサイトになります。<br>
+        会員でない方も商品の閲覧はできますが、<br>
+        購入には会員登録が必要です。
+      </div>
+    </div>
+<!--　▲ ジャンボトロン　 -->
+<h1>新着商品</h1>
+<div class="row">
+  <% @items.each do |item| %>
+  <div class="col-md-4">
+    <div>
+     <%= image_tag item.get_image(100,100) %>
+     <p><%= item.name %></p>
+     <p>¥<%= item.price %></p>
+    </div>
+  <% end %>
+  <div class="col-12 clearfix">
+      <div class="float-right test-box">
+  <%= link_to '全ての商品を見る >', items_path %></div>
+  </div>
+  </div>
+</div>
+
