@@ -8,7 +8,7 @@ class Item < ApplicationRecord
   validates :price, :name, presence: true
 
   def add_tax_price
-    (self.price * 1.10).round
+    (price * 1.10).floor
   end
 
   def get_image(width,height)
