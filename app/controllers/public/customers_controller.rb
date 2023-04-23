@@ -1,4 +1,5 @@
 class Public::CustomersController < ApplicationController
+    
   def show
    @customer = current_customer
   end
@@ -18,9 +19,14 @@ def update
 end
 
   def quit
+ @customer = current_customer
   end
 
   def out
+@customer = current_customer
+@customer.update(is_deleted: true)
+reset_session
+redirect_to new_customer_session_path
 
   end
 
