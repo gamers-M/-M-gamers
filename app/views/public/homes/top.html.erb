@@ -14,7 +14,7 @@
     <div class="mx-1">
      <%= image_tag item.get_image(100,100) %>
      <p><%= item.name %></p>
-     <p>¥<%= item.price %></p>
+     <p>¥<%= item.price.to_s(:delimited) %></p>
     </div>
   <% end %>
   </div>

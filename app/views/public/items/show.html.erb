@@ -1,1 +1,13 @@
 <h1>商品詳細</h1>
+<div>
+  <%= image_tag @item.get_image(200,200) %>
+  <p><%= @item.name %></p>
+  <p> <%= @item.explanation %></p>
+  <p></p>
+  <p>¥<%= @item.add_tax_price.to_s(:delimited) %>（税込）</p>
+  <%= form_with model: @cart_item, url: cart_items_path do |f| %>
+    <%= f.hidden_field :item_id, :value => @item.id %>
+    <%= f.select :quantity, *[1..10] %>
+    <%= f.submit 'カートに入れる' %>
+  <% end %>
+</div>
