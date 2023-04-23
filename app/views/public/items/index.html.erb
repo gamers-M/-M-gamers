@@ -1,1 +1,12 @@
 <h1>商品一覧</h1>
+<div class="d-flex flex-wrap">
+
+    <% @items.each do |item| %>
+    <ul>
+      <li><%= image_tag item.get_image(100,100) %></li>
+      <li><%= link_to item.name, item_path(item.id) %></li>
+      <li>¥<%= item.add_tax_price.to_s(:delimited) %></li>
+    </ul>
+
+  <% end %>
+</div>
