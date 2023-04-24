@@ -26,9 +26,9 @@ Rails.application.routes.draw do
     #配送先
     resources :addresses, only: [:destroy, :edit, :index, :update, :create]
     #注文
-    resources :orders, only: [:show, :index, :new, :crate]
-    post 'orders/log'
+    post 'orders/confirm'
     get 'orders/thanx'
+    resources :orders, only: [:show, :index, :new, :crate]
     #カート内商品
     resources :cart_items, only: [:index, :update, :destroy, :create]
     delete 'cart_items' => 'cart_items#all_destroy'
