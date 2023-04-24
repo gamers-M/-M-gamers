@@ -17,7 +17,7 @@
         <tr>
         <div calss="form-group">
           <th><%= f.label :"住所" %></th>
-          <td><%= f.text_field :address, placeholder:"東京都渋谷区代々木神園町0-0", :size => "50", id: "customer_address" %></td>
+          <td><%= f.text_field :addresses, placeholder:"東京都渋谷区代々木神園町0-0", :size => "50", id: "customer_address" %></td>
         </div>
         </tr>
         <tr>
@@ -46,7 +46,7 @@
         <% @addresses.each do |address| %>
           <tr>
             <td><%= address.postcode %></td>
-            <td><%= address.address %></td>
+            <td><%= address.addresses %></td>
             <td><%= address.name %></td>
             <td><%= link_to "編集する", edit_address_path(address.id),class: "btn btn-primary"%></td>
 						<td><%= link_to "削除する", address_path(address.id),  class: "btn btn-danger", method: :delete %></td>
