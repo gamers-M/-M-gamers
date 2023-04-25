@@ -12,11 +12,21 @@ class Public::OrdersController < ApplicationController
 
   def confirm
     @order = Order.new(order_params)
+    binding.pry
     if params[:order][:address_number] == "0"
-    @address = Address.find(params[:order][:addresses_id])
-    @order.postcode = current_customer.postcode
-    @order.address = current_customer.address
-    @order.name = current_customer.last_name + first_name.current_customer
+      @order.postcode = current_customer.postcode
+      @order.address = current_customer.address
+      @order.name = current_customer.last_name + current_customer.first_name
+    elsif params[:order][:address_number] == "1"
+      @address = Address.find(params[:order][:address_id])
+      @order.postcode = @address.postcode
+      @order.address = @address.addresses
+      @order.name = @address.name
+    else params[:order][:address_number] == "2"
+      #@address = Address.new(address_params)
+      @order.customer_id = current_customer.id
+      #@order.save
+    end
 
     @cart_items = CartItem.all
     @total = @cart_items.inject(0) { |sum, item| sum + item.subtotal }
