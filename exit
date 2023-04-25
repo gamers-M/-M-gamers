@@ -1,0 +1,26 @@
+
+[1mFrom:[0m /home/ec2-user/environment/NAGANOcake/app/controllers/public/orders_controller.rb:16 Public::OrdersController#confirm:
+
+    [1;34m13[0m: [32mdef[0m [1;34mconfirm[0m
+    [1;34m14[0m:   @order = [1;34;4mOrder[0m.new(order_params)
+    [1;34m15[0m:   binding.pry
+ => [1;34m16[0m:   @address = [1;34;4mAddress[0m.find(params[[33m:order[0m][[33m:address_id[0m])
+    [1;34m17[0m:   [32mif[0m params[[33m:order[0m][[33m:address_number[0m] == [31m[1;31m"[0m[31m0[1;31m"[0m[31m[0m
+    [1;34m18[0m:     @order.postcode = current_customer.postcode
+    [1;34m19[0m:     @order.address = current_customer.address
+    [1;34m20[0m:     @order.name = current_customer.last_name + first_name.current_customer
+    [1;34m21[0m:     binding.pry
+    [1;34m22[0m:   [32melsif[0m params[[33m:order[0m][[33m:address_number[0m] == [31m[1;31m"[0m[31m1[1;31m"[0m[31m[0m
+    [1;34m23[0m:     @order.postcode = @address.postcode
+    [1;34m24[0m:     @order.address = @address.address
+    [1;34m25[0m:     @order.name = @address.last_name + first_name.current_customer
+    [1;34m26[0m:   [32melse[0m params[[33m:order[0m][[33m:address_number[0m] == [31m[1;31m"[0m[31m2[1;31m"[0m[31m[0m
+    [1;34m27[0m:     
+    [1;34m28[0m:   [32mend[0m
+    [1;34m29[0m: 
+    [1;34m30[0m:   @cart_items = [1;34;4mCartItem[0m.all
+    [1;34m31[0m:   @total = @cart_items.inject([1;34m0[0m) { |sum, item| sum + item.subtotal }
+    [1;34m32[0m:  [1;34m# @order = Order[0m
+    [1;34m33[0m:  [1;34m# @order.postage = 800[0m
+    [1;34m34[0m: [32mend[0m
+
