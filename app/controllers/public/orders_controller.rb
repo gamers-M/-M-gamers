@@ -3,7 +3,19 @@ class Public::OrdersController < ApplicationController
   end
 
   def create
-
+    @order = Order.new(order_params)
+    @order.customer_id = current_customer.id
+    @order.save
+    current_customer.cart_items.each do |cart_item|
+      @order_detail = OrderDetail.new
+      @order_detail.order_id = @order.id
+      @order_detail.item_id = cart_item.item_id
+      @order_detail.quantity = cart_item.quantity
+      @order_detail.price = cart_item.item.price
+      @order_detail.save
+    end
+      current_customer.cart_items.destroy_all
+      redirect_to orders_thanx_path
   end
 
   def new
@@ -12,7 +24,6 @@ class Public::OrdersController < ApplicationController
 
   def confirm
     @order = Order.new(order_params)
-    binding.pry
     if params[:order][:address_number] == "0"
       @order.postcode = current_customer.postcode
       @order.address = current_customer.address
@@ -23,18 +34,18 @@ class Public::OrdersController < ApplicationController
       @order.address = @address.addresses
       @order.name = @address.name
     else params[:order][:address_number] == "2"
-      #@address = Address.new(address_params)
       @order.customer_id = current_customer.id
-      #@order.save
     end
 
     @cart_items = CartItem.all
     @total = @cart_items.inject(0) { |sum, item| sum + item.subtotal }
-   # @order = Order
-   # @order.postage = 800
+    @order.postage = 800
+    @order.billing_amount = @total + @order.postage
   end
 
   def thanx
+    #@address = Address.new(address_params)
+    #@order.save
   end
 
   def index
@@ -42,23 +53,6 @@ class Public::OrdersController < ApplicationController
 
   private
     def order_params
-      params.require(:order).permit(:payment_method, :postcode, :address, :name)
+      params.require(:order).permit(:payment_method, :postcode, :address, :name, :postage, :billing_amount)
     end
 end
-
-# <table>
-#   <thead>
-#     <tr>
-#       <th>送料</th>
-#       <th>商品合計</th>
-#       <th>請求金額</th>
-#     </tr>
-#   </thead>
-#   <tbody>
-#     <tr>
-#       <td><%= @order.postage %></td>
-#       <td><%= @total.round.to_s(:delimited) %></td>
-#       <td><%= @order.postage+@total.round.to_s(:delimited) %></td>
-#     </tr>
-#   </tbody>
-# </table>
