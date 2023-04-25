@@ -1,5 +1,8 @@
 class Public::OrdersController < ApplicationController
   def show
+    @order = Order.find(params[:id])
+    @order_details = @order.order_details
+    @total = @order_details.inject(0) { |sum, item| sum + item.subtotal }
   end
 
   def create
@@ -49,6 +52,8 @@ class Public::OrdersController < ApplicationController
   end
 
   def index
+    @orders = Order.all
+    #@order = Order.find(params[:id])
   end
 
   private
