@@ -5,4 +5,8 @@ class Order < ApplicationRecord
 
   enum status: { waiting_for_production: 0, payment_confirmation: 1, in_production: 2, shipping_preparation: 3, sent: 4 }
 
+  def address_display
+   '〒' + postcode + ' ' + address + ' ' + name
+  end
+
 end
