@@ -9,4 +9,7 @@ class Order < ApplicationRecord
    '〒' + postcode + ' ' + address + ' ' + name
   end
 
+  def subtotal
+    item.add_tax_price*quantity
+  end
 end
