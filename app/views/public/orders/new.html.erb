@@ -18,7 +18,7 @@
       <div>
         <%= f.radio_button :address_number, 1 %>
         <%= f.label :登録済住所から選択 %></br>
-        <%= f.collection_select :address_id, Address.all, :id, :address_display, {include_blank: "--選択してください--"} %>
+        <%= f.collection_select :address_id, current_customer.addresses, :id, :address_display, {include_blank: "--選択してください--"} %>
       </div>
       <div>
         <%= f.radio_button :address_number, 2 %>
