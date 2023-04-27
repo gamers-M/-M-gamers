@@ -1,2 +1,51 @@
-<h1>Admin::Customers#edit</h1>
-<p>Find me in app/views/admin/customers/edit.html.erb</p>
+<div class="container">
+  <div class="m-5">
+    <h4><%= @customer.last_name %><%= @customer.first_name %>さんの会員情報編集</h4>
+    <%= form_with model: @customer,url: admin_customer_path(@customer.id), local:true do |f| %>
+    <form class="form-horizontal">
+      <div class="form-group">
+        <p class="col-2 control-label">会員ID<%= @customer.id %></p>
+      </div>
+      <div class="form-group">
+            <%= f.label :氏名, class: "col-2 control-label" %>
+            <%= f.text_field :last_name, class: "col-3" %>
+            <%= f.text_field :first_name, class: "col-3" %>
+      </div>
+      <div class="form-group">
+            <%= f.label :フリガナ, class: "col-2 control-label"  %>
+            <%= f.text_field :last_name_kana, class: "col-3" %>
+            <%= f.text_field :first_name_kana, class: "col-3" %>
+      </div>
+      <div class="form-group">
+            <%= f.label :郵便番号, class: "col-2 control-label" %>
+            <%= f.text_field :postcode, class: "col-3" %>
+      </div>
+      <div class="form-group">
+            <%= f.label :住所, class: "col-2 control-label" %>
+            <%= f.text_field :address, class: "col-3" %>
+      </div>
+      <div class="form-group">
+            <%= f.label :電話番号, class: "col-2 control-label" %>
+            <%= f.text_field :phone_number, class: "col-3" %>
+      </div>
+      <div class="form-group">
+            <%= f.label :メールアドレス, class: "col-2 control-label" %>
+            <%= f.text_field :email, class: "col-3" %>
+      </div>
+      <div class="form-group">
+            <span class="col-2 control-label">会員ステータス </span>
+            <span class="col-3">
+            <%= f.label :有効 %>
+            <%= f.radio_button :is_deleted,false %>
+            <%= f.label :退会 %>
+            <%= f.radio_button :is_deleted,true %>
+            </span>
+      </div>
+      </form>
+      <div class="form-group">
+            <%= f.submit "変更を保存", class: "btn btn-success" %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

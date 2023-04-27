@@ -1,0 +1,14 @@
+<div class='container m-5'>
+<h1>商品一覧</h1>
+<div class="d-flex flex-wrap">
+
+    <% @items.each do |item| %>
+    <ul>
+      <class="list-unstyled"><%= image_tag item.get_image(100,100) %></class><br>
+      <class="list-unstyled"><%= link_to item.name, item_path(item.id) %></class><br>
+      <class="list-unstyled"><%= item.add_tax_price.to_s(:delimited) %></class><br>
+    </ul>
+     
+  <% end %>
+</div>
+</div

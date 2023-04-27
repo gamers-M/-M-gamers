@@ -1,0 +1,181 @@
+=> Booting Puma
+=> Rails 6.1.7.3 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.6.5 (ruby 3.1.2-p20) ("Birdie's Version")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 22293
+* Listening on http://127.0.0.1:8080
+* Listening on http://[::1]:8080
+Use Ctrl-C to stop
+Started GET "/items" for 133.206.86.64 at 2023-04-23 08:04:18 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Public::ItemsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/public/items/index.html.erb:4
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:15:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 1], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:15:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 2], ["variation_digest", "58nLvjR5lLpeOdoWw8+s844W40I="], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:15:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 5], ["variation_digest", "6/MbmLdOctrj7ukuFyVm7nWShm4="], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:15:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.6ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 8], ["variation_digest", "6/MbmLdOctrj7ukuFyVm7nWShm4="], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:15:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (1.2ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 10], ["variation_digest", "6/MbmLdOctrj7ukuFyVm7nWShm4="], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  Rendered public/items/index.html.erb within layouts/application (Duration: 207.7ms | Allocations: 46478)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:38
+  Rendered layouts/_header.html.erb (Duration: 53.6ms | Allocations: 14584)
+  Rendered layout layouts/application.html.erb (Duration: 305.6ms | Allocations: 66873)
+Completed 200 OK in 340ms (Views: 303.3ms | ActiveRecord: 12.5ms | Allocations: 74077)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZek5uZFdVMU5IZDBZekV4WjNaMFltTjNOMmRuWm5wc05XOXBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dlgybHRZV2RsTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ibTlmYVcxaFoyVXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDQtMjNUMDg6MDU6MDEuNTIyWiIsInB1ciI6ImJsb2Jfa2V5In19--ddfc61df424bd27506e79ba01eedb5f0b1f6d4e2/no_image.jpg" for 133.206.86.64 at 2023-04-23 08:04:18 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"no_image"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 673)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM0ZsYVRKM2FtNHlZblp3TTI1a1lUQTNOWE5rZUcwMFpqTTFiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dlgybHRZV2RsTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ibTlmYVcxaFoyVXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDQtMjNUMDg6MDU6MDEuOTYwWiIsInB1ciI6ImJsb2Jfa2V5In19--7346f103da738a7b671a8013b862d8f84c44c244/no_image.jpg" for 133.206.86.64 at 2023-04-23 08:04:18 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOVzgzT1hwbGFqRnNNelZtYVdaaWQzVXhOalIwYTNjMWNtMWpiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA1OjAxLjc2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--741e0f4f871b8e3ea72b6107e645bb73799a244b/IMG_6499.jpeg" for 133.206.86.64 at 2023-04-23 08:04:18 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlSGxoT1hSak4yOXdPSFo2ZVc5dmVXOHdlSGxsZUhJMmMzSXdiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJNekU0TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk16RTRMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA1OjAxLjk1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1471a6bf06fd01bf41d678fbedc33dfca2b5b6/IMG_6318.jpeg" for 133.206.86.64 at 2023-04-23 08:04:18 +0000
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"no_image"}
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiR1o2TUdWb2RIZGxiamRsWW5KeVlXUXhNV1JzTVRBNWNqa3lad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA1OjAyLjAxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e79bedcac6295854a1b43d8ec4ffcc7297735a7e/IMG_6499.jpeg" for 133.206.86.64 at 2023-04-23 08:04:18 +0000
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6499"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6318"}
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6499"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 291)
+
+
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 2795)
+
+
+Completed 200 OK in 10ms (ActiveRecord: 0.0ms | Allocations: 4566)
+
+
+Started GET "/items/5" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Public::ItemsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/public/items_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering public/items/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 5], ["record_type", "Item"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/models/item.rb:15:in `get_image'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 10], ["variation_digest", "vrA3GLlzlwMjSEe6cE8VrJKWxds="], ["LIMIT", 1]]
+  ↳ app/models/item.rb:19:in `get_image'
+  Rendered public/items/show.html.erb within layouts/application (Duration: 25.6ms | Allocations: 4932)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mCustomer Load (1.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:10
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:38
+  Rendered layouts/_header.html.erb (Duration: 9.8ms | Allocations: 2380)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 10389)
+Completed 200 OK in 74ms (Views: 47.2ms | ActiveRecord: 2.3ms | Allocations: 15659)
+
+
+Started GET "/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eaa2762e8402fab2675d1a67a81d71101d3828fd/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hSeVpYTnBlbVZmZEc5ZmJHbHRhWFJiQjJrQnlHa0J5QT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--104b89eca34c1f641c6f38b4f8cc010589277de5/IMG_6499.jpeg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhZek5uZFdVMU5IZDBZekV4WjNaMFltTjNOMmRuWm5wc05XOXBjd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dlgybHRZV2RsTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ibTlmYVcxaFoyVXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDQtMjNUMDg6MDU6MDEuNTIyWiIsInB1ciI6ImJsb2Jfa2V5In19--ddfc61df424bd27506e79ba01eedb5f0b1f6d4e2/no_image.jpg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNM0ZsYVRKM2FtNHlZblp3TTI1a1lUQTNOWE5rZUcwMFpqTTFiZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW01dlgybHRZV2RsTG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25ibTlmYVcxaFoyVXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjMtMDQtMjNUMDg6MDU6MDEuOTYwWiIsInB1ciI6ImJsb2Jfa2V5In19--7346f103da738a7b671a8013b862d8f84c44c244/no_image.jpg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"no_image"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOVzgzT1hwbGFqRnNNelZtYVdaaWQzVXhOalIwYTNjMWNtMWpiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA1OjAxLjc2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--741e0f4f871b8e3ea72b6107e645bb73799a244b/IMG_6499.jpeg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlSGxoT1hSak4yOXdPSFo2ZVc5dmVXOHdlSGxsZUhJMmMzSXdiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJNekU0TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk16RTRMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA1OjAxLjk1NloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1471a6bf06fd01bf41d678fbedc33dfca2b5b6/IMG_6318.jpeg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6318"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 310)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"no_image"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6499"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms | Allocations: 5553)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiR1o2TUdWb2RIZGxiamRsWW5KeVlXUXhNV1JzTVRBNWNqa3lad1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA1OjAyLjAxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e79bedcac6295854a1b43d8ec4ffcc7297735a7e/IMG_6499.jpeg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::Representations::RedirectController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6499"}
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--eaa2762e8402fab2675d1a67a81d71101d3828fd", "variation_key"=>"[FILTERED]", "filename"=>"IMG_6499"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mActiveStorage::VariantRecord Load (0.1ms)[0m  [1m[34mSELECT "active_storage_variant_records".* FROM "active_storage_variant_records" WHERE "active_storage_variant_records"."blob_id" = ? AND "active_storage_variant_records"."variation_digest" = ? LIMIT ?[0m  [["blob_id", 10], ["variation_digest", "vrA3GLlzlwMjSEe6cE8VrJKWxds="], ["LIMIT", 1]]
+Completed 200 OK in 17ms (ActiveRecord: 0.0ms | Allocations: 2820)
+
+
+  [1m[36mActiveStorage::Attachment Load (1.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 6], ["record_type", "ActiveStorage::VariantRecord"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (7.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (7.8ms) [0m[34mGenerated URL for file at key: vfksh0bkqy91cu5ibq9m6jnvobj5 (https://b699eabf359c463da771f114e2b42e26.vfs.cloud9.ap-northeast-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbVpyYzJnd1ltdHhlVGt4WTNVMWFXSnhPVzAyYW01MmIySnFOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA5OjIzLjg0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--17df1d9cdf04f7022cd93cbdbc00c6b441a52df9/IMG_6499.jpeg)[0m
+Redirected to https://b699eabf359c463da771f114e2b42e26.vfs.cloud9.ap-northeast-1.amazonaws.com/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbVpyYzJnd1ltdHhlVGt4WTNVMWFXSnhPVzAyYW01MmIySnFOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA5OjIzLjg0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--17df1d9cdf04f7022cd93cbdbc00c6b441a52df9/IMG_6499.jpeg
+Completed 302 Found in 215ms (ActiveRecord: 10.6ms | Allocations: 10686)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkbVpyYzJnd1ltdHhlVGt4WTNVMWFXSnhPVzAyYW01MmIySnFOUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtsTlIxODJORGs1TG1wd1pXY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMGxOUjE4Mk5EazVMbXB3WldjR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIzLTA0LTIzVDA4OjA5OjIzLjg0MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--17df1d9cdf04f7022cd93cbdbc00c6b441a52df9/IMG_6499.jpeg" for 133.206.86.64 at 2023-04-23 08:04:23 +0000
+Cannot render console from 133.206.86.64! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"IMG_6499"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 287)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2023-04-23 08:05:15 +0000 ===
+- Goodbye!
+Exiting
