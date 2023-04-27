@@ -2,45 +2,44 @@
 
 <%= form_with model:@customer,url: customer_registration_path do |f| %>
   <%= render "public/shared/error_messages", resource: resource %>
-
+<form class="form-horizontal">
   <div class="field">
-    名前
-    <%= f.label :（姓） %>
+    名前 
+    <%= f.label :（姓）, class: "col-2 control-label" %>
     <%= f.text_field :last_name, placeholder: "令和", autofocus: true %>
-    <%= f.label :（名） %>
+    <%= f.label :（名）, class: "col-2 control-label"  %>
     <%= f.text_field :first_name, placeholder: "道子", autocomplete: "off" %>
   </div>
-
   <div class="field">
     フリガナ
-    <%= f.label :（セイ） %>
+    <%= f.label :（セイ）, class: "col-2 control-label"  %>
     <%= f.text_field :last_name_kana, placeholder: "レイワ",  autocomplete: "off" %>
-    <%= f.label :（メイ） %>
+    <%= f.label :（メイ）, class: "col-2 control-label"   %>
     <%= f.text_field :first_name_kana, placeholder: "ミチコ", autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :メールアドレス %>
-    <%= f.email_field :email, placeholder: "sample@example.com",  autocomplete: "off" %>
+    <%= f.label :メールアドレス, class: "col-2 control-label"   %>
+    <%= f.email_field :email, placeholder: "sample@example.com",  autocomplete: "off", class: "col-3" %>
   </div>
 
   <div class="field">
-    <%= f.label :郵便番号（ハイフンなし） %>
+    <%= f.label :郵便番号（ハイフンなし）, class: "col-2 control-label"   %>
     <%= f.text_field :postcode, placeholder: "0000000",  autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :住所 %>
+    <%= f.label :住所, class: "col-2 control-label"   %>
     <%= f.text_field :address, placeholder: "東京都渋谷区代々木神園町0-0",  autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :電話番号（ハイフンなし） %>
+    <%= f.label :電話番号（ハイフンなし）, class: "col-2 control-label"   %>
     <%= f.text_field :phone_number, placeholder: "00000000000",  autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :パスワード %>
+    <%= f.label :パスワード, class: "col-1 control-label"  %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> 文字以上)</em>
     <% end %>
@@ -48,7 +47,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :パスワード（確認用） %>
+    <%= f.label :パスワード（確認用）, class: "col-2 control-label"   %>
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
@@ -58,3 +57,5 @@
 <% end %>
 
 <%= render "public/shared/links" %>
+</form>
+
