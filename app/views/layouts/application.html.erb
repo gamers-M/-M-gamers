@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>NAGANOcake</title>
+    
+      
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,13 +13,6 @@
   </head>
   <body>
     <%= render 'layouts/header' %>
-
-    <% if admin_signed_in? %>
-    aaa
-    <% else %>
-    bbb
-    <% end %>
-
     <%= yield %>
   </body>
 </html>
