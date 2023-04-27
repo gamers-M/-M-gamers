@@ -2,6 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="/"><span>長野ケーキ</span></a>
+    
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,8 +35,8 @@
         <%= link_to "ログイン", new_customer_session_path %>
       </li>
     <% end %>
-        <P>admin</P>
         <% if admin_signed_in? %>
+        <P>admin</P>
         <li>
         <%= link_to "商品一覧", admin_items_path %>
         </li>
@@ -51,14 +52,14 @@
       <li>
         <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
       </li>
-    <% else %>
-
-      <li>
-        <%= link_to "ログイン", new_admin_session_path %>
-      </li>
     <% end %>
       </ul>
       </div>
     </div>
+    <% if customer_signed_in? %>
+    <div class="navbar-brand mx-auto" style="width: 200px;">
+      <h6>ようこそ、<%= current_customer.last_name%>さん！</h6>
+    </div>
+    <% end %>
   </nav>
 </header>
